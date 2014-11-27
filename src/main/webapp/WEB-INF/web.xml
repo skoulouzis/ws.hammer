@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <description>Hybrid-bAsed Match-Maker for E-science Resources</description>
+    <display-name>Hammer</display-name>
+    <context-param>
+        <description>URL of the application (server)
+http://pc-vlab19.science.uva.nl:8081/ws-hammer/</description>
+        <param-name>host</param-name>
+        <param-value>http://localhost:8080/ws-hammer/</param-value>
+    </context-param>
+    <context-param>
+        <description>Location of OWLS and XML files in the local host.
+D:\development\netbeans_projects\ws-hammer\build\web\repository
+D:\development\netbeans_projects\ws-hammer\build\web\services\1.1
+/opt/tomcat6/webapps/ws-hammer/repository
+ws-hammer/repository</description>
+        <param-name>serverFolder</param-name>
+        <param-value>/home/alogo/workspace/ws-hammer/src/ws-hammer/build/web/repository/</param-value>
+    </context-param>
+    <context-param>
+        <description>A whitelist is a list of filenames that could be uploaded/stored (i.e list of allowed filenames)</description>
+        <param-name>whiteListWSVLAM</param-name>
+        <param-value>*.xml</param-value>
+    </context-param>
+    <context-param>
+        <description>A whitelist is a list of filenames that could be uploaded/stored (i.e list of allowed filenames)</description>
+        <param-name>whiteListOWLS</param-name>
+        <param-value>*.owl,*.owls</param-value>
+    </context-param>
+    <context-param>
+        <description>A whitelist is a list of filenames that could be uploaded/stored (i.e list of allowed filenames)</description>
+        <param-name>whiteListArch</param-name>
+        <param-value>*.tar,*.gz,*.zip</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Download</servlet-name>
+        <servlet-class>nl.wtcw.vle.hammer.servlet.Download</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HammerEngineServlet</servlet-name>
+        <servlet-class>nl.wtcw.vle.hammer.servlet.HammerEngineServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Download</servlet-name>
+        <url-pattern>/Download</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HammerEngineServlet</servlet-name>
+        <url-pattern>/HammerEngineServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

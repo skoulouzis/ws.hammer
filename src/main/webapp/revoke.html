@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <link href="resources/style_vle.css" rel="stylesheet" type="text/css">
+        <link href="resources/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+            function printMe()  {
+                parent.focus();
+                parent.print();	}
+        </script>
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+        <title>WS-VLAM HAMMER: Revoke resource advertisement</title>
+    </head>
+    <body topmargin="0" bottommargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+        <table style="width: 100%; text-align: left; height: 100%" border="0" cellpadding="0"
+               cellspacing="0">
+            <tbody>
+                <tr style="vertical-align: top; height: 50px">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"></td>
+                    <td style="vertical-align: top; width: 130px; background-color: rgb(0, 0, 0);"></td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"></td>
+                    <td style="vertical-align: top; width: 50px; background-color: rgb(204, 204, 204);"></td>
+                    <td style="vertical-align: top; background-color: rgb(204, 204, 204); text-align: right;">
+                        <a href="JavaScript:printMe();">
+                            <img title="Print" alt="Print" src="resources/printer.gif" style="border: 0px solid ; width: 45px; height: 41px;">
+                        </a>
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px; background-color: rgb(204, 204, 204);"></td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 130px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);">
+                        <table style="color: rgb(255, 255, 255); width: 130px;" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img alt="Menu" title="HAMMER Menu" src="resources/DESCRIPTION.png"
+                                             style="border: 0px solid ; width: 120px; height: 19px;" />
+                                        <a href="index.html"  ><img name="overview" src="resources/overview.png" onmouseover="document['overview'].src='resources/overviewb.png'" onmouseout="document['overview'].src='resources/overview.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="howtos.html" ><img src="resources/HOW-TOs.png" name="howtos" onmouseover="document['howtos'].src='resources/HOW-TOsb.png'" onmouseout="document['howtos'].src='resources/HOW-TOs.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="support.html"><img src="resources/support.png" name="support" onmouseover="document['support'].src='resources/supportb.png'" onmouseout="document['support'].src='resources/support.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="about.html"  ><img src="resources/about.png" name="about" onmouseover="document['about'].src='resources/aboutb.png'" onmouseout="document['about'].src='resources/about.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center;" valign="top"><br>
+                                        <img alt="HAMMER" title="HAMMER" src="resources/hammer_logo.png"
+                                             style="border: 0px solid ; width: 120px; height: 141px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 50px;"><br>
+                    </td>
+                    <td style="vertical-align: top;">
+                        &nbsp;
+                        <table border="0" style="text-align: center; margin-left:auto; margin-right:auto;">
+                            <tr><td style="text-align: center; width: 60px;">
+                                    <img alt="WS-HAMMER Logo" title="WS-HAMMER" src="resources/hammer_logo_web_white.png" style="border: 0px solid;">
+                                </td><td class="text_title" style="text-align: left;">
+                                    Revoke: Rescinding of advertisement of resources
+                            </td></tr>
+                            <tr><td colspan="2">
+                                    <img alt="WS-VLAM" title="WS-VLAM Hammmer" src="resources/ws-vlam_web_top_name.png" style="border: 0px solid ;">
+                            </td></tr>
+                        </table>
+                        
+                        <p class="text_body">This page allows users to withdraw their advertisement from the WS-HAMMER repository. We advise that users having resources and modules supported by the WS_VLAM, share their descriptions on WS-HAMMER by publishing them. However, there are situations were the withdrawal of the advertisiment is required.</p>
+                        <p class="text_body">The procedure concerning revoking the advertisement is listed in detail below.</p>
+                        
+                        
+                        <form name="form" action="HammerEngineServlet" method="GET">
+                            
+                            <input type="hidden" id="request" name="requestType" value="revoke">
+                            
+                            <p class="text_head">Revoke</p>
+                            <table>
+                                <tr>
+                                    <td><p class="text_list">OWL-S URL :</td><td><input name="owls_url" size="90" type="text" accept="text/xml"/></td>
+                                </tr>
+                            </table>
+                            <p class="text_body"></p>
+                            <p class="text_body">Please press the following button to procced with the withdrawing of the description of the resource.<br>	
+                            <input  style="background-color: #ff4500; color: #ffffff; font-weight: bold;"  value="Revoke" name="btn_revoke" type="submit">
+                            <br><br>
+                        </form>
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px;"></td>
+                </tr>
+                <tr style="vertical-align: bottom;">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"><br>
+                    </td>
+                    <td style="vertical-align: middle; width: 130px; background-color: rgb(0, 0, 0); text-align: center; color: rgb(255, 255, 255);">
+                        VL-e SP 2.5<br>
+                    <small><small>Kruislaan 403<br>1098 SJ, Amsterdam</></small></small></td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 50px;"><br>
+                    </td>
+                    <td style="vertical-align: middle; text-align: left;">
+                        <small>Copyright &copy; 2005-2008. UvA and Contributors. All rights reserved.</small><br>
+                        <img src="resources/line_light.gif"  width="100%" height="3">
+                        <img src="resources/vle_sticker.png" width="340" height="56"> 
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://pc-vlab19.science.uva.nl:8081/ws-hammer/concepts/SigWin.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://pc-vlab19.science.uva.nl:8081/ws-hammer/concepts/SigWin.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="complexType">
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#data"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="decimal">
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#number"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="rank">
+    <rdfs:comment xml:lang="en">The Rank data structure</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#complexType"/>
+  </owl:Class>
+  <owl:Class rdf:ID="number">
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#simpleType"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A number</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="simpleType">
+    <rdfs:subClassOf rdf:resource="#data"/>
+  </owl:Class>
+  <owl:Class rdf:ID="long">
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#integer"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="logLabel">
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#simpleType"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Logging level label. 
+Ordered from lower priority to maximum priority, the levels are:
+Extreme, High, Detail, Debug, Info, Timing, Release, Warn, Error, Fatal, NoWarn.
+Any message labeled with priority larger than or equal to the chosen log level will be displayed</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="sortedList">
+    <rdfs:comment xml:lang="en">An 'array' for which the elements are sorted (in crescent order)</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#array"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="double">
+    <rdfs:subClassOf rdf:resource="#number"/>
+  </owl:Class>
+  <owl:Class rdf:ID="nonNegativeInteger">
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#integer"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="array">
+    <hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></hasElement>
+    <rdfs:comment xml:lang="en">A labeled array. 
+A sequence of elements of the same datatype preceded by a header containing its size and a description label. The header must have the following predefined structure (see Header). 
+#&lt;size&gt; &lt;descr&gt; or
+#&lt;size&gt; descr=&lt;descr&gt; or
+#size=&lt;size&gt; descr=&lt;descr&gt;
+Notes: 
+Space after "#" and before or after "=" is optional.
+Both &lt;size&gt; and &lt;descr&gt; may be omitted.
+It is possible to use /c max_size=&lt;max_size&gt; instead of /c size=&lt;size&gt;</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#complexType"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</owl:minCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasElement"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="testFlag">
+    <rdfs:comment xml:lang="en">I/O ports test flags. 
+A string representing with I/O ports to test. Accepted values:
+None: will not test any port.
+All: will test all ports.
+Input: will test all input ports.
+Output: will test all output ports.
+A list of port names separated by blanc spaces.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#simpleType"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="bounds">
+    <rdfs:comment xml:lang="en">The bounds of a partition (with a label). 
+Consists of a triple: (label, start, end), or label=[start, end]. Use: The intervals are closed, therefore they include both ends. In the case that 'start' and 'end' are integral types, this means that the interval length is equal to end-start+1.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#complexType"/>
+  </owl:Class>
+  <owl:Class rdf:ID="boolean">
+    <rdfs:comment xml:lang="en">A Boolean flag. 
+A string representing a Boolean. Accepted values:
+For true: words starting with Y, y, T, or t.
+For false: words starting with N, n, F, or f.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#simpleType"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="sortedSet">
+    <rdfs:subClassOf rdf:resource="#sortedList"/>
+    <rdfs:comment xml:lang="en">A labeled sorted array with no duplicates.
+An 'SortedList' with no duplicate values.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="simpleString">
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#string"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A string with no spaces</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="file">
+    <rdfs:comment xml:lang="en">A generic file (local path)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#complexType"/>
+  </owl:Class>
+  <owl:Class rdf:ID="float">
+    <rdfs:subClassOf rdf:resource="#number"/>
+  </owl:Class>
+  <owl:Class rdf:ID="data">
+    <rdfs:comment xml:lang="en">Inputs and outputs data types used for SigWing ports</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="integer">
+    <rdfs:comment xml:lang="en">An integer number</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#decimal"/>
+  </owl:Class>
+  <owl:Class rdf:ID="nonPositiveInteger">
+    <rdfs:subClassOf rdf:resource="#integer"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SWParameters">
+    <rdfs:comment xml:lang="en">A SlideWindowParameters data structure</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#complexType"/>
+  </owl:Class>
+  <owl:Class rdf:ID="dataType">
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#simpleType"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A char indicating a data type 
+i = integer, d = double, f = float or s = string</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="string">
+    <rdfs:comment xml:lang="en">A string (may contain spaces)</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:resource="#simpleType"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.3.1, Build 430)  http://protege.stanford.edu -->

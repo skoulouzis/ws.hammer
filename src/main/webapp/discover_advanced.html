@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        
+        <link href="resources/style_vle.css" rel="stylesheet" type="text/css">
+        <link href="resources/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        
+        <script type="text/javascript" src="javascript/query.js"></script>
+        <script type="text/javascript" src="javascript/imports.js"></script>
+        <script type="text/javascript" src="javascript/contact.js"></script>
+        <script type="text/javascript" src="javascript/ipop.js"></script>
+        <script type="text/javascript" src="javascript/servicecategory.js"></script>
+        <script type="text/javascript" src="javascript/serviceparameter.js"></script>
+        <script type="text/javascript" src="javascript/help.js"></script>
+        <script type="text/javascript" src="javascript/slider.js"></script>
+        
+        <script>
+            function printMe()  {
+                parent.focus();
+                parent.print();	}
+        </script>
+        <title>WS-VLAM HAMMER: Advanced query submission</title>
+    </head>
+    
+    
+    <body onresize="resize(true)" onload="init()" topmargin="0" bottommargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+        
+        <table style="width: 100%; text-align: left; height: 100%" border="0" cellpadding="0"
+               cellspacing="0">
+            <tbody>
+                <tr style="vertical-align: top; height: 50px">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"></td>
+                    <td style="vertical-align: top; width: 130px; background-color: rgb(0, 0, 0);"></td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"></td>
+                    <td style="vertical-align: top; width: 50px; background-color: rgb(204, 204, 204);"></td>
+                    <td style="vertical-align: top; background-color: rgb(204, 204, 204); text-align: right;">
+                        <a href="JavaScript:printMe();">
+                            <img title="Print" alt="Print" src="resources/printer.gif" style="border: 0px solid ; width: 45px; height: 41px;">
+                        </a>
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px; background-color: rgb(204, 204, 204);"></td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 130px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);">
+                        <table style="color: rgb(255, 255, 255); width: 130px;" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img alt="Menu" title="HAMMER Menu" src="resources/DESCRIPTION.png"
+                                             style="border: 0px solid ; width: 120px; height: 19px;" />
+                                        <a href="index.html"  ><img name="overview" src="resources/overview.png" onmouseover="document['overview'].src='resources/overviewb.png'" onmouseout="document['overview'].src='resources/overview.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="howtos.html" ><img src="resources/HOW-TOs.png" name="howtos" onmouseover="document['howtos'].src='resources/HOW-TOsb.png'" onmouseout="document['howtos'].src='resources/HOW-TOs.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="support.html"><img src="resources/support.png" name="support" onmouseover="document['support'].src='resources/supportb.png'" onmouseout="document['support'].src='resources/support.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="about.html"  ><img src="resources/about.png" name="about" onmouseover="document['about'].src='resources/aboutb.png'" onmouseout="document['about'].src='resources/about.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center;" valign="top"><br>
+                                        <img alt="HAMMER" title="HAMMER" src="resources/hammer_logo.png"
+                                             style="border: 0px solid ; width: 120px; height: 141px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 50px;"><br>
+                    </td>
+                    <td style="vertical-align: top;">
+                        &nbsp;
+                        <table border="0" style="text-align: center; margin-left:auto; margin-right:auto;">
+                            <tr><td style="text-align: center; width: 60px;">
+                                    <img alt="WS-HAMMER Logo" title="WS-HAMMER" src="resources/hammer_logo_web_white.png" style="border: 0px solid;">
+                                </td><td class="text_title" style="text-align: left;">
+                                    Submission of advanced queries<br>
+                                    A <b>OWL-S Profile</b> will be used to formulate the query
+                            </td></tr>
+                            <tr><td colspan="2">
+                                    <img alt="WS-VLAM" title="WS-VLAM Hammmer" src="resources/ws-vlam_web_top_name.png" style="border: 0px solid ;">
+                            </td></tr>
+                        </table>
+                        
+                        <form name="form" method="GET" enctype="text/plain">
+                            <table style="width: 100%; text-align: left; background-color: #cbdced;" >
+                                <tr>
+                                    <td class="text_body">
+                                        Please select a variant of the <b>matchmaker algorithm</b> to be used:<br>
+                                    </td>
+                                    <td style="text-align: right;">
+                                        <a href="discover_advanced.request.html" >
+                                            <img name="query_info" 
+                                                 src="resources/query.png"
+                                                 onmouseover="document['query_info'].src='resources/queryover.png'"
+                                                 onmouseout="document['query_info'].src='resources/query.png'"
+                                                 style="border: 0px solid ;">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <p class="text_body">
+                                            <select id="shown_matchingType" name="matchingType">
+                                                <option value="M0">M0 = Purely logic-based semantic matching</option>
+                                                <option value="M1">M1 = M0 + Loss-of-information similarity measure</option>
+                                                <option value="M2">M2 = M0 + Extended Jacquard similarity measure</option>
+                                                <option value="M3">M3 = M0 + Cosine similarity measure</option>                                    
+                                                <option value="M4">M4 = M0 + Jensen-Shannon divergence based similarity measure</option>                                    
+                                            </select><br><br>
+                                            
+                                            <b>Minimum degree</b> of (hybrid) semantic match required:<br>
+                                            <select id="shown_minDegree" name="minDegree">
+                                                <option value="Exact">Exact</option>
+                                                <option value="Plugin">Plug-in</option>
+                                                <option value="Subsumes">Subsumes</option>
+                                                <option value="Subsumes-by">Subsumes-by</option>
+                                                <option value="Nearest-neigbour">Nearest-neigbour</option>
+                                            </select><br><br>
+                                            
+                                            <b>Syntactic similarity threshold</b> (used for nearest-neighbour, or subsumed-by match). This value will be ignored when using M0, and is 0 by default.
+                                            <table>
+                                                <tr>
+                                                    <td><input id="shown_threshold" name="threshold" type="Text" size="3" onchange="A_SLIDERS[0].f_setValue(this.value)"></td>
+                                                    <td>
+                                                        <script type="text/javascript">
+                                                        var A_TPL3h = {
+                                                            'b_vertical' : false,
+                                                            'b_watch': true,
+                                                            'n_controlWidth': 240,
+                                                            'n_controlHeight': 16,
+                                                            'n_sliderWidth': 19,
+                                                            'n_sliderHeight': 16,
+                                                            'n_pathLeft' : 1,
+                                                            'n_pathTop' : 0,
+                                                            'n_pathLength' : 218,
+                                                            's_imgControl': 'resources/sldr2h_bg.gif',
+                                                            's_imgSlider': 'resources/sldr2h_sl.gif',
+                                                            'n_zIndex': 1
+                                                        }
+                                                        var A_INIT3h = {
+                                                            's_form' : 0,
+                                                            's_name': 'shown_threshold',
+                                                            'n_minValue' : 0,
+                                                            'n_maxValue' : 100,
+                                                            'n_value' : 0,
+                                                            'n_step' : 1
+                                                        }
+                                                        
+                                                        new slider(A_INIT3h, A_TPL3h);
+                                                        </script>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <br>
+                            
+                            <img src="resources/line_light.gif" height="3" width="100%">
+                            
+                            <table style="width: 100%; text-align: left;" >
+                                <tr>
+                                    <td class="text_head">
+                                        Service Information
+                                    </td>
+                                    <td style="text-align: right;">
+                                        <a href="discover_advanced.profile.html" >
+                                            <img name="profile_info" 
+                                                 src="resources/profile.png"
+                                                 onmouseover="document['profile_info'].src='resources/profileover.png'"
+                                                 onmouseout="document['profile_info'].src='resources/profile.png'"
+                                                 style="border: 0px solid ;">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <p class="text_body">
+                                Service Name<br><input type="text" name="serviceName" size="50" value=""> <br>
+                                Description<br><textarea name="textDescription" rows="5" cols="78" wrap="off"></textarea><br>
+                                <!--                                hasProcess<br><input name="hasProcess (URI)" size="50" id="hasProcess">
+-->
+                            </p>
+                            
+                            <img src="resources/line_light.gif" height="3" width="100%">
+                            
+                            <p class="text_head">Contact Information<br>
+                                <div class="bold" style="border: 0px groove ;" id="CI"></div>
+                            </p>
+                            
+                            <p class="text_body">
+                                <input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" onclick="contact_add();resize(true)" value=" + " name="contact">
+                                <input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" onclick="contact_del()" value=" - " name="delcontact">
+                            </p>
+                            
+                            <img src="resources/line_light.gif" height="3" width="100%">
+                            <p class="text_head">Categories<br>
+                                <div class="bold" style="border: 0px groove ;" id="SC"></div>
+                            </p>
+                            <p class="text_body">
+                                <input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" onclick="srvcat_add();resize(true)" value=" + ">
+                                <input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" onclick="srvcat_del();resize(true)" value=" - "><br>
+                                <input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" onclick="srvcat_vle_add()"    value="  VL-e Category"><br>
+                                <input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" onclick="srvcat_naisc_add()"  value=" NAISC Category"><br>
+                                <input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" onclick="srvcat_unspsc_add()" value="UNSPSC Category"><br>
+                            </p>
+                            
+                            <img src="resources/line_light.gif"  height="3" width="100%">
+                            <p class="text_head">Ontology (imports)</p>
+                            <div class="bold" style="border: 0px groove ;" id="IM"></div>
+                            
+                            <p class="text_body">
+                                <input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" onclick="import_add();resize(true)" value=" + ">
+                                <input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" onclick="import_del()" value=" - ">
+                            </p>
+                            
+                            <img src="resources/line_light.gif" height="3" width="100%">
+                            <p class="text_head">Input ports<br>
+                                <div class="bold" style="border: 0px groove ;" id="DI"></div>
+                            </p>
+                            <p class="text_body">
+                                <input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" onclick="in_add();resize(true)" value=" + ">
+                                <input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" onclick="in_del()" value=" - ">
+                            </p>
+                            
+                            <img src="resources/line_light.gif" height="3" width="100%">
+                            <p class="text_head">Output ports<br>
+                                <div class="bold" style="border: 0px groove ;" id="DO"></div>
+                            </p>
+                            <p class="text_body">
+                                <input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" onclick="out_add();resize(true)" value=" + ">
+                                <input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" onclick="out_del()" value=" - ">
+                            </p>
+                            
+                            <img src="resources/line_light.gif" height="3" width="100%">
+                            <p class="text_head">Parameters<br>
+                                <div class="bold" style="border: 0px groove ;" id="SP"></div>
+                            </p>
+                            <p class="text_body">
+                                <input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" onclick="srvparam_add();resize(true)" value=" + ">
+                                <input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" onclick="srvparam_del()" value=" - ">
+                            </p>
+                            
+                            <img src="resources/line_light.gif" height="3" width="100%">
+                            <span style="text-align: center;">
+                                <input style="background-color: #6495ed; color: #ffffff; font-weight: bold;" type="button" value="Example" onclick="show_sample()">&nbsp;&nbsp;&nbsp;
+                                <input style="background-color: #6495ed; color: #ffffff; font-weight: bold;" type="button" value="OWL-S Profile" onclick="show()">
+                                <input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" value="Reset" onclick="clear_all()">
+                            </span>
+                            
+                        </form>
+                        
+                        <form name="h_form" action="HammerEngineServlet" method="GET">
+                            <input type="hidden" id="h_form_request" name="requestType" value="query">
+                            <input type="hidden" id="h_form_query_t" name="queryType" value="advanced">
+                            <input type="hidden" id="h_form_hidden" name="data">
+                            <input type="hidden" id="h_form_action" name="action">
+                            <input type="hidden" id="h_form_matchingType" name="matchingType">
+                            <input type="hidden" id="h_form_minDegree" name="minDegree">
+                            <input type="hidden" id="h_form_threshold" name="threshold">
+                            <span style="text-align: center;">
+                                <input style="background-color: #ff9933; color: #ffffff; font-weight: bold;" type="submit" value="Submit Query" onclick="return set_hidden(false)" name="query">
+                            </span>
+                        </form>
+                        
+                        <br><br>
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px;"></td>
+                </tr>
+                <tr style="vertical-align: bottom;">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"><br>
+                    </td>
+                    <td style="vertical-align: middle; width: 130px; background-color: rgb(0, 0, 0); text-align: center; color: rgb(255, 255, 255);">
+                        VL-e SP 2.5<br>
+                    <small><small>Kruislaan 403<br>1098 SJ, Amsterdam</></small></small></td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 50px;"><br>
+                    </td>
+                    <td style="vertical-align: middle; text-align: left;">
+                        <small>Copyright &copy; 2005-2008. UvA and Contributors. All rights reserved.</small><br>
+                        <img src="resources/line_light.gif"  width="100%" height="3">
+                        <img src="resources/vle_sticker.png" width="340" height="56"> 
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

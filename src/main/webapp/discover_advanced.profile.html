@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <link href="resources/style_vle.css" rel="stylesheet" type="text/css">
+        <link href="resources/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+            function printMe()  {
+                parent.focus();
+                parent.print();	}
+        </script>
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+        <title>WS-VLAM HAMMER: Instructions for advanced queries (OWL-S Profile)</title>
+    </head>
+    <body topmargin="0" bottommargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+        <table style="width: 100%; text-align: left; height: 100%" border="0" cellpadding="0"
+               cellspacing="0">
+            <tbody>
+                <tr style="vertical-align: top; height: 50px">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"></td>
+                    <td style="vertical-align: top; width: 130px; background-color: rgb(0, 0, 0);"></td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"></td>
+                    <td style="vertical-align: top; width: 50px; background-color: rgb(204, 204, 204);"></td>
+                    <td style="vertical-align: top; background-color: rgb(204, 204, 204); text-align: right;">
+                        <a href="JavaScript:printMe();">
+                            <img title="Print" alt="Print" src="resources/printer.gif" style="border: 0px solid ; width: 45px; height: 41px;">
+                        </a>
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px; background-color: rgb(204, 204, 204);"></td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 130px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);">
+                        <table style="color: rgb(255, 255, 255); width: 130px;" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img alt="Menu" title="HAMMER Menu" src="resources/DESCRIPTION.png"
+                                             style="border: 0px solid ; width: 120px; height: 19px;" />
+                                        <a href="index.html"  ><img name="overview" src="resources/overview.png" onmouseover="document['overview'].src='resources/overviewb.png'" onmouseout="document['overview'].src='resources/overview.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="howtos.html" ><img src="resources/HOW-TOs.png" name="howtos" onmouseover="document['howtos'].src='resources/HOW-TOsb.png'" onmouseout="document['howtos'].src='resources/HOW-TOs.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="support.html"><img src="resources/support.png" name="support" onmouseover="document['support'].src='resources/supportb.png'" onmouseout="document['support'].src='resources/support.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="about.html"  ><img src="resources/about.png" name="about" onmouseover="document['about'].src='resources/aboutb.png'" onmouseout="document['about'].src='resources/about.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center;"><br>
+                                        <img alt="HAMMER" title="HAMMER" src="resources/hammer_logo.png"
+                                             style="border: 0px solid ; width: 120px; height: 141px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 50px;"><br>
+                    </td>
+                    <td style="vertical-align: top;">
+                        &nbsp;
+                        <table border="0" style="text-align: center; margin-left:auto; margin-right:auto;">
+                            <tr><td style="text-align: center; width: 60px;">
+                                    <img alt="WS-HAMMER Logo" title="WS-HAMMER" src="resources/hammer_logo_web_white.png" style="border: 0px solid;">
+                                </td><td class="text_title" style="text-align: left;">
+                                    Instructions for submission of advanced queries<br>
+                                    Description of OWL-S Profile
+                            </td></tr>
+                            <tr><td colspan="2">
+                                    <img alt="WS-VLAM" title="WS-VLAM Hammmer" src="resources/ws-vlam_web_top_name.png" style="border: 0px solid ;">
+                            </td></tr>
+                        </table>
+                        
+                        <p class="text_body">
+                            WS-HAMMER allows users to describe the capabilities they are expecting in sought
+                            resources by creating <a target="_blank" href="http://www.w3.org/Submission/OWL-S/#4">
+                            OWL Profiles</a>. These these profiles are submitted to hammer's engine as semantic queries.<br>
+                            The current version of WS-HAMMER builds on the <a target="_blank" href="http://www.w3.org/Submission/OWL-S">
+                            OWL-S (Semantic Markup for Web Services)</a>, hiding the user from the layered
+                            approach to markup language development (XML, RDF, OWL, and OWL-S). The following descriptions cover the 
+                            relevant aspects of each profile.
+                        </p>
+                        
+                        <table style="width: 100%;" border="0" cellpadding="2" cellspacing="2">
+                            <tbody>
+                                <tr>
+                                    <td class="table_head" colspan="3">Service Information</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text_list" style="vertical-align: top;">
+                                        These properties of the profile provide
+                                        human-readable information. A profile may have
+                                        at most one service name and text description.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Service Name</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Name of the sought resource.</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Description</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">
+                                        A brief description of the resource.
+                                        It summarizes what the resource offers, it describes what the resource
+                                        requires to work, and it indicates any additional information that the
+                                        developer of the resource wants to share with the users.
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="3" class="table_head">Contact Information</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text_list" style="vertical-align: top;">
+                                        This section provides a mechanism of refering
+                                        to humans or individuals responsible for the resource (or some aspect of
+                                        the resource). The range of this property is unspecified withing OWL-S,
+                                        but can be restricted to some other ontology, such as the Actor ontology.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Name</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Name of resource provider</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Title</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Title of resource provider</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Phone</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Telephone number</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Email</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Email address</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Fax</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Fax Number</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Address</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Postal (or physical) address in free format</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Web URL</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">URL to the provider's web site</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" value=" + " name="contact"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Adds a new slot for Contact Information</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" value=" - " name="delcontact"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Deletes the last slot from the Contact Information</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="3" class="table_head">Categories</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text_list">
+                                        The <em>Categories</em> section 
+                                        characterize of resources on the bases of some classification that may be
+                                        outside OWL-S (and possibly outside OWL). The <em>Category</em> is
+                                        represent in OWL-S Ontology by four properties. OWL-S also
+                                        defines links to well know service classification systems,
+                                        like NAISC and UNSPSC. If you would like
+                                        classify your service using these classificaition, or VL-e classificaition,
+                                        users can directly click on the corresponding add button.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Name</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">
+                                        The name of the actual category,
+                                        which could be just a literal, or perhaps the URI of the process
+                                        parameter (a property).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Taxonomy</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">
+                                        Reference to the taxonomy scheme. It can be
+                                        either a URI of the taxonomy, or a URL where the taxonomy resides, or
+                                        the name of the taxonomy or anything else
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Value</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">The value in a specific taxonomy</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Code</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">The code associated to a taxonomy</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" value=" + " name="category"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Adds a new Category Slot</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" value=" - " name="delcategory"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Deletes the last Category Slot</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"> <input value="VL-e Category" style="background-color: #3cb371; color: #ffffff; font-weight: bold;" name="vl-e" type="button"> </td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Adds a new VL-e Category Slot</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"> <input value="NAISC Category" style="background-color: #3cb371; color: #ffffff; font-weight: bold;" name="naisc" type="button"> </td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Adds a new NAISC Category Slot</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"> <input value="UNSPSC Category" style="background-color: #3cb371; color: #ffffff; font-weight: bold;" name="unspsc" type="button"> </td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Adds a new UNSPSC Category Slot</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="3" class="table_head">Ontology (imports)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text_list">
+                                        While defining the capabilities of the sought
+                                        resource, the users will be using either their OWL class definition or third
+                                        parties definition. The URLs which contains these class defintions
+                                        should be imported by the hammer's engine to query process. 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Ontology URL</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">
+                                        Reference to the OWL ontology. It is the URI where the ontology resides.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" value=" + " name="import"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Adds a new URL slot</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" value=" - " name="delimport"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Deletes the last URL slot</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="3" class="table_head">Input ports</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text_list">This section regards over instances of Inputs as defined in the Process Ontology</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Input Name</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Name of the input parameter<br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Input Type</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Type of the input parameter (OWL Class, i.e. URI)</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" value=" + " name="input"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Adds a new Input Slot</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" value=" - " name="delinput"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Deletes the last Input Slot</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="3" class="table_head">Output ports</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text_list">This section regards over instances of Outputs as defined in the Process Ontology</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Output Name</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Name of the output parameter</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><b>Output Type</b></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Type of the input parameter (OWL Class, i.e. URI)</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" value=" + " name="output"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Adds an new Output Slot </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" value=" - " name="deloutput"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Deletes the last Output Slot</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="3" class="table_head">Parameters</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text_list">
+                                        The Parameters section is an expandable list
+                                        of properties that may accompany a profile description
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Parameter Name</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">
+                                        The name of the actual parameter, which could be
+                                        just a literal, or perhaps the URI of the process parameter (a
+                                        property).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">sParameter</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">The value of the parameter within some OWL ontology.</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #3cb371; color: #ffffff; font-weight: bold;" type="button" value=" + " name="parameter"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Adds a new Parameter Slot</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" value=" - " name="delparameter"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Deletes the last Parameter Slot </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="table_head">Other options</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #6495ed; color: #ffffff; font-weight: bold;" type="button" value="Example"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Creates a sample OWL-S Profile</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #6495ed; color: #ffffff; font-weight: bold;" type="button" value="OWL-S Profile"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Shows the OWL-S Profile generated from the above data</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #ff4500; color: #ffffff; font-weight: bold;" type="button" value="Reset"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Resets the entire form</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title"><input style="background-color: #ff9933; color: #ffffff; font-weight: bold;" type="submit" value="Submit Query"></td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">Submits the OWL-S Profile as an query to the engine</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br><br>
+                        
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px;"></td>
+                </tr>
+                <tr style="vertical-align: bottom;">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"><br>
+                    </td>
+                    <td style="vertical-align: middle; width: 130px; background-color: rgb(0, 0, 0); text-align: center; color: rgb(255, 255, 255);">
+                        VL-e SP 2.5<br>
+                    <small><small>Kruislaan 403<br>1098 SJ, Amsterdam</></small></small></td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 50px;"><br>
+                    </td>
+                    <td style="vertical-align: middle; text-align: left;">
+                        <small>Copyright &copy; 2005-2008. UvA and Contributors. All rights reserved.</small><br>
+                        <img src="resources/line_light.gif"  width="100%" height="3">
+                        <img src="resources/vle_sticker.png" width="340" height="56"> 
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

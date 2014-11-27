@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <link href="resources/style_vle.css" rel="stylesheet" type="text/css">
+        <link href="resources/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+            function printMe()  {
+                parent.focus();
+                parent.print();	}
+        </script>
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+        <title>WS-VLAM HAMMER: Instructions for advanced queries (request)</title>
+    </head>
+    <body topmargin="0" bottommargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+        <table style="width: 100%; text-align: left; height: 100%" border="0" cellpadding="0"
+               cellspacing="0">
+            <tbody>
+                <tr style="vertical-align: top; height: 50px">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"></td>
+                    <td style="vertical-align: top; width: 130px; background-color: rgb(0, 0, 0);"></td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"></td>
+                    <td style="vertical-align: top; width: 50px; background-color: rgb(204, 204, 204);"></td>
+                    <td style="vertical-align: top; background-color: rgb(204, 204, 204); text-align: right;">
+                        <a href="JavaScript:printMe();">
+                            <img title="Print" alt="Print" src="resources/printer.gif" style="border: 0px solid ; width: 45px; height: 41px;">
+                        </a>
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px; background-color: rgb(204, 204, 204);"></td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 130px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);">
+                        <table style="color: rgb(255, 255, 255); width: 130px;" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img alt="Menu" title="HAMMER Menu" src="resources/DESCRIPTION.png"
+                                             style="border: 0px solid ; width: 120px; height: 19px;" />
+                                        <a href="index.html"  ><img name="overview" src="resources/overview.png" onmouseover="document['overview'].src='resources/overviewb.png'" onmouseout="document['overview'].src='resources/overview.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="howtos.html" ><img src="resources/HOW-TOs.png" name="howtos" onmouseover="document['howtos'].src='resources/HOW-TOsb.png'" onmouseout="document['howtos'].src='resources/HOW-TOs.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="support.html"><img src="resources/support.png" name="support" onmouseover="document['support'].src='resources/supportb.png'" onmouseout="document['support'].src='resources/support.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                        <a href="about.html"  ><img src="resources/about.png" name="about" onmouseover="document['about'].src='resources/aboutb.png'" onmouseout="document['about'].src='resources/about.png'"
+                                                                    style="border: 0px solid ; width: 120px; height: 19px;"></a><br>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center;"><br>
+                                        <img alt="HAMMER" title="HAMMER" src="resources/hammer_logo.png"
+                                             style="border: 0px solid ; width: 120px; height: 141px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 50px;"><br>
+                    </td>
+                    <td style="vertical-align: top;">
+                        &nbsp;
+                        <table border="0" style="text-align: center; margin-left:auto; margin-right:auto;">
+                            <tr><td style="text-align: center; width: 60px;">
+                                    <img alt="WS-HAMMER Logo" title="WS-HAMMER" src="resources/hammer_logo_web_white.png" style="border: 0px solid;">
+                                </td><td class="text_title" style="text-align: left;">
+                                    Instructions for submission of advanced queries<br>
+                                    Description of the options for the semantic matchmaker
+                            </td></tr>
+                            <tr><td colspan="2">
+                                    <img alt="WS-VLAM" title="WS-VLAM Hammmer" src="resources/ws-vlam_web_top_name.png" style="border: 0px solid ;">
+                            </td></tr>
+                        </table>
+                        
+                        <p class="text_body">The WS-HAMMER has an engine performing the semantic matchmaking task. This engine is based on <a target="_blank" href="http://www-ags.dfki.uni-sb.de/~klusch/owls-mx/">OWLS-MX</a>, which is a hybrid matchmaker. The process of matchmaking involves an <a target="_blank" href="http://www.w3.org/Submission/OWL-S/">OWL-S Profile</a> as query. This query is basically a functional representation of the resource, in terms of IOPEs. The hybrid matchmaker combines the logic-based semantic matching with syntactic token-based similarity metrics, in order to obtain both, description logics and information retrieval of related resources.</p>
+                        <p class="text_body">Although WS-HAMMER supports six different techniques to discover resources, here only the five instances (M0 to M4) of the <a href="./discover_advanced.html">advanced discovery</a> are explained. The <a href="./discover.html">keyword discovery</a> of resources can be easily perceived.</p>
+                        
+                        <table style="width: 100%;" border="0" cellpadding="2" cellspacing="2">
+                            <tbody>
+                                <tr>
+                                    <td class="table_head" colspan="3">Matchmaker algorithm</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text_list" style="vertical-align: top;">
+                                        The five generic hybrid matching algorithms establish whether and which syntactic similarity metric is used by the WS-HAMMER's engine. This engine uses an OWL-DL description logic reasoner (Pellet) for logic based filtering, and the cosine, loss-of-information, extended Jacquard, and Jensen-Shannon information divergence based similarity metrics for complementary approximate matching.<br>
+                                        In essence, each of algorithm uses the same logic-based semantic filters but different information retrieval similarity metric for content-based matching of the functional representation of the resource.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">M0</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list"><b>Purely logic-based semantic matching</b><br>
+                                        The algorithm MO performs logic based only semantic matching of resources I/O description.<br>
+                                        The logic-based semantic filters <i>Exact</i>, <i>Plug-in</i>, and <i>Subsumes</i> are applied as defined in the following <b>Minimum degree</b> section, whereas the hybrid filter <i>Subsumed-by</i> is utilized without checking the syntactic similarity constraint.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">M1</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list"><b>M0 + Loss-of-information similarity measure</b><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">M2</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list"><b>M0 + Extended Jacquard similarity measure</b><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">M3</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list"><b>M0 + Cosine similarity measure</b><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">M4</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list"><b>M0 + Jensen-Shannon divergence based similarity measure</b><br>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="3" class="table_head">Minimum degree</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text_list" style="vertical-align: top;">
+                                        The semantic matchmaking process computes the degree of semantic matching for a given pair of resource advertisement and request by successively applying five different filters: <b>Exact</b>, <b>Plug-in</b>, <b>Subsumes</b>, <b>Subsumed-by</b>  and <b>Nearest-neighbour</b>.<br>
+                                        The first three are <b>logic-based</b> only whereas the last two are <b>hybrid</b> due to the required additional computation of syntactic similarity values. Thus, if the M0 variant is selected, selecting <b>nearest-neighbour</b> as minimum is equal to selecting <b>subsumed-by</b> as there is no <b>nearest neighbour</b> filter for M0.<br>
+                                        The order of matching filters regarding size of results due to relaxation of constraints is the following:
+                                        <i>Exact < Plug-In < Subsumes < Subsumed-By < Nearest-neighbour</i>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Exact</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">
+                                        The funtional representation of the resource (I/O signature) perfectly matches the one from the request (with respect to logic-based equivalence of their formal semantics).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Plug-in</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">
+                                        By relaxing the <b>exact</b> matching constraint, a resource may require less input than it has been specified in the request.<br>
+                                        This guarantees at a minimum that the resource can be invoked with the provided input, if the involved OWL input concepts can be equivalently mapped to corresponding resource signature.<br>
+                                        In addition, the resource is expected to return more specific output data whose logically defined semantics is exactly the same or very close to what has been requested by the user.<br>
+                                        This kind of match is borrowed from the software engineering domain, where software components are considered to plug-in match with each other as defined above but not restricting the output concepts to be direct children of those of the query.
+                                        Please note that <b>Plug-in</b> is a necessary constraint of the subsequent filters.<br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Subsumes</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">
+                                        This filter is weaker than the <b>Plug-in</b> filter with respect to the extent the returned output is more specific than requested by the user. This happens since the filter relaxes the constraint of immediate output concept subsumption.<br>
+                                        As a consequence, the returned set of relevant resources is extended in principle.                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Subsumes-by</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">
+                                        This filter selects resources whose output data is more general than one requested. In this sense, the filter subsumes the request. The matchmaker focuses on direct parent output concepts to avoid selecting resources returning data which might be too general.<br>
+                                        It depends on the individual perspective taken by the user, the application domain, and the granularity of the underlying ontology at hand, whether a relaxation of this constraint is appropriate, or not.                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table_title">Nearest-neigbour</td>
+                                    <td class="table_title">:</td>
+                                    <td class="text_list">TBM</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="3" class="table_head">Syntactic similarity threshold</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text_list" style="vertical-align: top;">
+                                        This slider allows the users to set the value of the similarity threshold to appropriate levels. The threshold value is used by the hybrid filters (<b>subsumed-by</b> and <b>nearest neighbour</b>).<br>
+                                        On one hand, if the semantic degree of a service is <b>subsumed-by</b> but the syntactic similarity is below the threshold, then the hybrid degree of match is <b>fail</b>. On the other hand, if the semantic degree is <b>fail</b> but the syntactic similarity is higher than, or equal to the threshold, then the resulting hybrid degree of match is <b>nearest neighbour</b>.<br>
+                                        If a resource does not match with request, according to any of the filters, the semantic degree is <b>fail</b>. 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <br><br>
+                        
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px;"></td>
+                </tr>
+                <tr style="vertical-align: bottom;">
+                    <td style="vertical-align: top; width: 10px; background-color: rgb(0, 0, 0);"><br>
+                    </td>
+                    <td style="vertical-align: middle; width: 130px; background-color: rgb(0, 0, 0); text-align: center; color: rgb(255, 255, 255);">
+                        VL-e SP 2.5<br>
+                    <small><small>Kruislaan 403<br>1098 SJ, Amsterdam</></small></small></td>
+                    <td style="vertical-align: top; width: 7px; background-color: rgb(102, 102, 102);"><br>
+                    </td>
+                    <td style="vertical-align: top; width: 50px;"><br>
+                    </td>
+                    <td style="vertical-align: middle; text-align: left;">
+                        <small>Copyright &copy; 2005-2008. UvA and Contributors. All rights reserved.</small><br>
+                        <img src="resources/line_light.gif"  width="100%" height="3">
+                        <img src="resources/vle_sticker.png" width="340" height="56"> 
+                    </td>
+                    <td style="vertical-align: top; horizontal-align: left; width: 50px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
